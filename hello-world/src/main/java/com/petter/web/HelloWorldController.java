@@ -1,5 +1,6 @@
 package com.petter.web;
 
+import com.petter.bean.DemoBean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,4 +21,12 @@ public class HelloWorldController {
         return "Hello world!";
     }
 
+    //默认使用JackSon进行Json解析
+    @RequestMapping("/demo")
+    public DemoBean getDemo() {
+        DemoBean demoBean = new DemoBean();
+        demoBean.setId(1L);
+        demoBean.setName("hongxf");
+        return demoBean;
+    }
 }
