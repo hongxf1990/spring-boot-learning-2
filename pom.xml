@@ -12,7 +12,8 @@
 		<module>global-exception</module>
         <module>jpa-hibernate</module>
         <module>static-content</module>
-    </modules>
+		<module>schedule-task</module>
+	</modules>
     <packaging>pom</packaging>
 
 	<name>spring-boot-learning-2</name>
