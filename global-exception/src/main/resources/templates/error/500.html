@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>5XX页面</title>
+</head>
+<body>
+    <p th:text="'错误码：' + ${status}"></p>
+    <p th:text="${content}"></p>
+</body>
+</html>
