@@ -10,7 +10,8 @@
         <module>hello-world</module>
 		<module>hot-swapping</module>
 		<module>global-exception</module>
-	</modules>
+        <module>jpa-hibernate</module>
+    </modules>
     <packaging>pom</packaging>
 
 	<name>spring-boot-learning-2</name>
