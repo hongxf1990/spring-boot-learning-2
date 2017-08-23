@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spring-boot-learning-2</artifactId>
+        <groupId>com.petter</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>hot-swapping</artifactId>
+    <description>伪热部署</description>
+
+    <dependencies>
+        <!--
+            使用两个类加载器，其中基础类加载器加载那些不会变化的第三方类库，另外一个重启类加载器加载活跃的类，即用户类
+            当项目重启时候，重启类加载器被丢弃，生成一个新的重启类加载器，自然会加快速度。所以要实现所谓的热部署，
+            需要手动触发重启机制，Eclipse中是保存文件自动重启，IDEA需要Build -> Make Project（Ctrl+F9）
+            JRebel和开源的Spring Loaded实现的是真正的热部署，更快
+            最后devTools会默认关闭一些缓存功能（template engines、Spring MVC）
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+</project>
