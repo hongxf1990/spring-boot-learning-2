@@ -14,7 +14,8 @@
         <module>static-content</module>
 		<module>schedule-task</module>
 		<module>druid-datasource</module>
-	</modules>
+        <module>spring-get-bean</module>
+    </modules>
     <packaging>pom</packaging>
 
 	<name>spring-boot-learning-2</name>
