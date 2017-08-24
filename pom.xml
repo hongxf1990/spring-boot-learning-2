@@ -13,6 +13,7 @@
         <module>jpa-hibernate</module>
         <module>static-content</module>
 		<module>schedule-task</module>
+		<module>druid-datasource</module>
 	</modules>
     <packaging>pom</packaging>
 
