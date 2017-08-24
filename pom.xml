@@ -16,6 +16,7 @@
 		<module>druid-datasource</module>
         <module>spring-get-bean</module>
         <module>thymeleaf-config</module>
+        <module>servlet-register</module>
     </modules>
     <packaging>pom</packaging>
 
