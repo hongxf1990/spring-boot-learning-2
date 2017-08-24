@@ -18,6 +18,7 @@
         <module>thymeleaf-config</module>
         <module>servlet-register</module>
         <module>interceptor-config</module>
+        <module>application-start-before-run</module>
     </modules>
     <packaging>pom</packaging>
 
