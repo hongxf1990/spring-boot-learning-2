@@ -17,6 +17,7 @@
         <module>spring-get-bean</module>
         <module>thymeleaf-config</module>
         <module>servlet-register</module>
+        <module>interceptor-config</module>
     </modules>
     <packaging>pom</packaging>
 
