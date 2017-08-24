@@ -15,6 +15,7 @@
 		<module>schedule-task</module>
 		<module>druid-datasource</module>
         <module>spring-get-bean</module>
+        <module>thymeleaf-config</module>
     </modules>
     <packaging>pom</packaging>
 
