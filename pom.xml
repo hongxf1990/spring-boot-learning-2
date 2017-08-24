@@ -19,6 +19,7 @@
         <module>servlet-register</module>
         <module>interceptor-config</module>
         <module>application-start-before-run</module>
+        <module>config-processor</module>
     </modules>
     <packaging>pom</packaging>
 
