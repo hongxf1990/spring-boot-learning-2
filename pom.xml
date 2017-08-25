@@ -20,6 +20,8 @@
         <module>interceptor-config</module>
         <module>application-start-before-run</module>
         <module>config-processor</module>
+        <module>redis</module>
+        <module>redis-cache</module>
     </modules>
     <packaging>pom</packaging>
 
