@@ -22,6 +22,7 @@
         <module>config-processor</module>
         <module>redis</module>
         <module>redis-cache</module>
+        <module>ehcache-cache</module>
     </modules>
     <packaging>pom</packaging>
 
