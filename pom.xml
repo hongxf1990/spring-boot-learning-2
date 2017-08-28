@@ -23,6 +23,7 @@
         <module>redis</module>
         <module>redis-cache</module>
         <module>ehcache-cache</module>
+        <module>shiro-auth</module>
     </modules>
     <packaging>pom</packaging>
 
