@@ -21,17 +21,15 @@ public class DatasourceConfig {
      * 2. 指定DruidDataSource
      * @return
      */
-    @Bean(name = "primaryDS")
-    //@Qualifier("primaryDS")
     @Primary
     @ConfigurationProperties(prefix="spring.primary.datasource")
+    @Bean(name = "primaryDS")
     public DataSource primaryDataSource() {
         return DataSourceBuilder.create().type(DruidDataSource.class).build();
     }
 
-    @Bean(name = "secondaryDS")
-    //@Qualifier("secondaryDS")
     @ConfigurationProperties(prefix="spring.secondary.datasource")
+    @Bean(name = "secondaryDS")
     public DataSource secondaryDataSource() {
         return DataSourceBuilder.create().build();
     }

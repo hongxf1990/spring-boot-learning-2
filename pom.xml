@@ -25,6 +25,7 @@
         <module>ehcache-cache</module>
         <module>shiro-auth</module>
         <module>multi-datasource</module>
+        <module>logging-logback</module>
     </modules>
     <packaging>pom</packaging>
 
