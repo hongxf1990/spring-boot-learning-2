@@ -24,6 +24,7 @@
         <module>redis-cache</module>
         <module>ehcache-cache</module>
         <module>shiro-auth</module>
+        <module>multi-datasource</module>
     </modules>
     <packaging>pom</packaging>
 
