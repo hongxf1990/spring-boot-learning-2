@@ -27,6 +27,7 @@
         <module>multi-datasource</module>
         <module>logging-logback</module>
         <module>mybatis-config</module>
+        <module>aop-config</module>
     </modules>
     <packaging>pom</packaging>
 
