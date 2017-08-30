@@ -26,6 +26,7 @@
         <module>shiro-auth</module>
         <module>multi-datasource</module>
         <module>logging-logback</module>
+        <module>mybatis-config</module>
     </modules>
     <packaging>pom</packaging>
 
