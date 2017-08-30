@@ -28,6 +28,7 @@
         <module>logging-logback</module>
         <module>mybatis-config</module>
         <module>aop-config</module>
+        <module>mail-sender</module>
     </modules>
     <packaging>pom</packaging>
 
