@@ -29,7 +29,8 @@
         <module>aop-config</module>
         <module>mail-sender</module>
 		<module>multi-environment</module>
-	</modules>
+        <module>async-task</module>
+    </modules>
     <packaging>pom</packaging>
 
 	<name>spring-boot-learning-2</name>
