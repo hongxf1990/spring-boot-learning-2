@@ -1,5 +1,6 @@
 package com.petter.web;
 
+import com.petter.properties.AbcProperties;
 import com.petter.properties.PetterProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,10 +22,17 @@ public class HelloWorldController {
 
     @Resource
     private PetterProperties petterProperties;
+    @Resource
+    private AbcProperties abcProperties;
 
     @RequestMapping("/hello-world")
     public PetterProperties hello(){
         return petterProperties;
+    }
+
+    @RequestMapping("/abc")
+    public AbcProperties hello2() {
+        return abcProperties;
     }
 
 }

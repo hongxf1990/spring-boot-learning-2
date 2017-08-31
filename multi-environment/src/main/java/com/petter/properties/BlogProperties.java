@@ -1,6 +1,10 @@
 package com.petter.properties;
 
+import org.hibernate.validator.constraints.URL;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author hongxf
@@ -11,7 +15,10 @@ public class BlogProperties {
 
     private String name;
     private String title;
+    @URL
+    private String url;
     private String desc;
+    private List<String> authors = new ArrayList<>(); //属性名称authors需要和application.properties文件的key是对应的。
 
     public String getName() {
         return name;
@@ -35,6 +42,14 @@ public class BlogProperties {
 
     public void setDesc(String desc) {
         this.desc = desc;
+    }
+
+    public List<String> getAuthors() {
+        return authors;
+    }
+
+    public void setAuthors(List<String> authors) {
+        this.authors = authors;
     }
 
     @Override
