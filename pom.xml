@@ -20,7 +20,6 @@
         <module>interceptor-config</module>
         <module>application-start-before-run</module>
         <module>config-processor</module>
-        <module>redis</module>
         <module>redis-cache</module>
         <module>ehcache-cache</module>
         <module>shiro-auth</module>
@@ -29,7 +28,8 @@
         <module>mybatis-config</module>
         <module>aop-config</module>
         <module>mail-sender</module>
-    </modules>
+		<module>multi-environment</module>
+	</modules>
     <packaging>pom</packaging>
 
 	<name>spring-boot-learning-2</name>
