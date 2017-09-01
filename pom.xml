@@ -30,6 +30,7 @@
         <module>mail-sender</module>
 		<module>multi-environment</module>
         <module>async-task</module>
+        <module>i18n-config</module>
     </modules>
     <packaging>pom</packaging>
 
