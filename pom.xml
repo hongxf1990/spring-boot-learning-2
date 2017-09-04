@@ -32,6 +32,7 @@
         <module>async-task</module>
         <module>i18n-config</module>
         <module>input-validator</module>
+        <module>transactional-cglib</module>
     </modules>
     <packaging>pom</packaging>
 
