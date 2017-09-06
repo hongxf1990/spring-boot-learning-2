@@ -29,6 +29,6 @@ public interface DemoMapper {
     String getNameById(String name);
 
     @Insert("insert into Demo(name,password) values(#{name},#{password})")
-    @Options(useGeneratedKeys = true, keyColumn = "id")
+    @Options(useGeneratedKeys = true, keyColumn = "id")  //该注解可以获取插入后记录的主键id，useGeneratedKeys=true就是定义数据库返回主键ID的
     long save(@Param("name") String name, @Param("password") String password);
 }

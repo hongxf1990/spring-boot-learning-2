@@ -33,6 +33,7 @@
         <module>i18n-config</module>
         <module>input-validator</module>
         <module>transactional-cglib</module>
+        <module>URL-match</module>
     </modules>
     <packaging>pom</packaging>
 
