@@ -35,6 +35,7 @@
         <module>transactional-cglib</module>
         <module>URL-match</module>
         <module>mongodb-config</module>
+        <module>swagger2-config</module>
     </modules>
     <packaging>pom</packaging>
 
