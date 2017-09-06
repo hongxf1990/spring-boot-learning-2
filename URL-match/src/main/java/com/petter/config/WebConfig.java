@@ -1,8 +1,15 @@
 package com.petter.config;
 
+import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.alibaba.fastjson.support.config.FastJsonConfig;
+import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter4;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer;
 import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+import java.util.List;
 
 /**
  * @author hongxf
@@ -30,5 +37,35 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     @Override
     public void configurePathMatch(PathMatchConfigurer configurer) {
         configurer.setUseSuffixPatternMatch(false).setUseTrailingSlashMatch(true);
+    }
+
+    /**
+     * (406)Could not find acceptable representation原因及解决方法
+     * 比如通过/login.html请求/login本应该返回json数据，系统会根据html去找html，类型不匹配报错
+     * favorPathExtension表示支持后缀匹配，
+     * 属性ignoreAcceptHeader默认为false，表示accept-header匹配
+     * defaultContentType开启默认匹配。
+     * 例如：请求aaa.xx，若设置<entry key="xx" value="application/xml"/> 也能匹配以xml返回。
+     * 根据以上条件进行一一匹配最终，得到相关并符合的策略初始化ContentNegotiationManager
+     */
+    @Override
+    public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
+        configurer.favorPathExtension(false);
+    }
+
+    /**
+     * 配置使用fastjson取代jackson，看自己的使用习惯了
+     * @param converters
+     */
+    @Override
+    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+        super.configureMessageConverters(converters);
+        //FastJsonHttpMessageConverter 用于Spring MVC4.2以下，FastJsonHttpMessageConverter4用于4.2以上
+        FastJsonHttpMessageConverter4 fastConverter = new FastJsonHttpMessageConverter4();
+        FastJsonConfig fastJsonConfig = new FastJsonConfig();
+        fastJsonConfig.setSerializerFeatures(SerializerFeature.PrettyFormat);
+        fastConverter.setFastJsonConfig(fastJsonConfig);
+
+        converters.add(fastConverter);
     }
 }

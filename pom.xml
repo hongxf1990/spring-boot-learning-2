@@ -34,6 +34,7 @@
         <module>input-validator</module>
         <module>transactional-cglib</module>
         <module>URL-match</module>
+        <module>mongodb-config</module>
     </modules>
     <packaging>pom</packaging>
 
