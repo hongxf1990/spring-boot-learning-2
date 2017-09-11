@@ -36,6 +36,7 @@
         <module>URL-match</module>
         <module>mongodb-config</module>
         <module>swagger2-config</module>
+        <module>shiro-stateless-auth</module>
     </modules>
     <packaging>pom</packaging>
 
