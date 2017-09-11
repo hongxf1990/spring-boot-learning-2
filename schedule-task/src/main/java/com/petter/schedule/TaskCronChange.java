@@ -5,7 +5,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.SchedulingConfigurer;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 import org.springframework.scheduling.support.CronTrigger;
-import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 
@@ -14,32 +15,16 @@ import java.util.Date;
  * @author hongxf
  * @since 2017-06-01 13:52
  */
-@Component
+@RestController
 @EnableScheduling
 public class TaskCronChange implements SchedulingConfigurer {
 
-    private static String cron;
+    private String cron = "0/5 * * * * *"; //每5秒执行一下定时任务
 
-    //外部修改
-    public static void setCron(String cron) {
-        TaskCronChange.cron = cron;
-    }
-
-    public TaskCronChange() {
-        //默认是：每5秒执行一次
-        cron = "0/5 * * * * *";
-        //这里开启一个线程修改了cron，同样可以使用外部控制进行修改
-        new Thread(() -> {
-            try {
-                //休眠15秒
-                Thread.sleep(15000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            //修改为：每10秒执行一次
-            cron = "0/10 * * * * *";
-            System.err.println("cron change to:" + cron);
-        }).start();
+    @RequestMapping("/changeCron")
+    public String changeCron() {
+        cron = "0/10 * * * * *"; //每10秒执行一下定时任务
+        return "changeCron";
     }
 
     @Override
@@ -50,7 +35,7 @@ public class TaskCronChange implements SchedulingConfigurer {
         };
 
         Trigger trigger = triggerContext -> {
-            //任务触发，可修改任务的执行周期.这里是用一个线程进行自动修改了
+            //任务触发，可修改任务的执行周期.
             CronTrigger cronTrigger = new CronTrigger(cron);
             return cronTrigger.nextExecutionTime(triggerContext);
         };
