@@ -8,6 +8,7 @@ import org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 
 /**
+ * 不实用，写的太死
  * quartz配置类
  * @author hongxf
  * @since 2017-09-12 14:49
