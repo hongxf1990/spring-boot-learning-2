@@ -38,6 +38,7 @@
         <module>swagger2-config</module>
         <module>shiro-stateless-auth</module>
         <module>schedule-task-with-boot</module>
+        <module>endpoint-actuator</module>
     </modules>
     <packaging>pom</packaging>
 
