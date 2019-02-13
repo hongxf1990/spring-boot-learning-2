@@ -39,6 +39,7 @@
         <module>shiro-stateless-auth</module>
         <module>schedule-task-with-boot</module>
         <module>endpoint-actuator</module>
+        <module>websocket</module>
     </modules>
     <packaging>pom</packaging>
 
