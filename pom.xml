@@ -40,7 +40,8 @@
         <module>schedule-task-with-boot</module>
         <module>endpoint-actuator</module>
         <module>websocket</module>
-    </modules>
+		<module>lombok</module>
+	</modules>
     <packaging>pom</packaging>
 
 	<name>spring-boot-learning-2</name>
